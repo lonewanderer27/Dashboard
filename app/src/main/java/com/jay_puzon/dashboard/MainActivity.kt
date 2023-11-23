@@ -73,6 +73,7 @@ class MainActivity : AppCompatActivity() {
                         CallEdit.putExtra(SQLiteDB.FNAME, user.fname)
                         CallEdit.putExtra(SQLiteDB.MNAME, user.mname)
                         CallEdit.putExtra(SQLiteDB.LNAME, user.lname)
+                        CallEdit.putExtra(SQLiteDB.GENDER, user.gender)
                         CallEdit.putExtra(SQLiteDB.ADDRESS, user.address)
                         CallEdit.putExtra(SQLiteDB.CONTACT, user.contact)
                         CallEdit.putExtra(SQLiteDB.APPROVED, user.approved)
