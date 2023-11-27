@@ -3,8 +3,8 @@
     <string-array name="genders">
         <item>Male</item>
         <item>Female</item>
-        <item>Non-Binary</item>
-        <item>I\'d rather not say</item>
+<!--        <item>Non-Binary</item>-->
+<!--        <item>I\'d rather not say</item>-->
     </string-array>
     <string-array name="approved">
         <item>No</item>
