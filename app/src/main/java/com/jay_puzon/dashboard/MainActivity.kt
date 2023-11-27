@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
                         if (!user.approved) {
                             Toast.makeText(
                                 this,
-                                "Your account is awaiting approval, please wait!",
+                                "Your account has not been approved yet by the admin!",
                                 Toast.LENGTH_SHORT
                             ).show()
                             return@setOnClickListener

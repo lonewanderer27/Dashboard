@@ -18,7 +18,7 @@ public class SQLiteDB extends SQLiteOpenHelper {
     public static final String DB_NAME = "records.db";
     public static final String CURRENT_PROFILE = "current_profile";
     public static final String PROFILE = "profile", PROFILE_ID = "PROFILE_ID", FNAME = "fname", MNAME = "mname", LNAME = "lname", ADDRESS = "address", ROLE = "role", USER = "user", ADMIN = "admin", APPROVED = "approved", USERNAME = "username", PASSWORD = "password", GENDER = "gender", CONTACT = "contact";
-    public static final String AD_FNAME = "John Andrei", AD_MNAME = "", AD_LNAME = "Cabili", AD_ADDRESS = "123 Main Street, Brgy Bahklu, Pasay City, Metro Manila, Philippines", AD_CONTACT = "09584083814", AD_GENDER = "Male";
+    public static final String AD_FNAME = "Mark James", AD_MNAME = "Casa", AD_LNAME = "Bonifacio", AD_ADDRESS = "789 Maple Avenue, Barangay Sampleville, Caloocan City, Metro Manila, Philippines", AD_CONTACT = "09485043911", AD_GENDER = "Male";
     ContentValues VALS;
     Cursor rs;
     ArrayList<String> Items;
@@ -194,7 +194,7 @@ public class SQLiteDB extends SQLiteOpenHelper {
         String[] recordData;
         User user = null;
 
-        String[] columns = {PROFILE_ID, USERNAME, PASSWORD, ROLE, FNAME, MNAME, LNAME, ADDRESS, GENDER, CONTACT, APPROVED };
+        String[] columns = {PROFILE_ID, USERNAME, PASSWORD, ROLE, FNAME, MNAME, LNAME, ADDRESS, GENDER, CONTACT, APPROVED};
         String selection = PROFILE_ID + " = ?";
         String[] selectionArgs = {String.valueOf(index)};
 
@@ -244,7 +244,7 @@ public class SQLiteDB extends SQLiteOpenHelper {
         String[] recordData;
         User user = null;
 
-        String[] columns = {PROFILE_ID, USERNAME, PASSWORD, ROLE, FNAME, MNAME, LNAME, ADDRESS, GENDER, CONTACT, APPROVED };
+        String[] columns = {PROFILE_ID, USERNAME, PASSWORD, ROLE, FNAME, MNAME, LNAME, ADDRESS, GENDER, CONTACT, APPROVED};
         String selection = USERNAME + " = ? AND " + PASSWORD + " = ? ";
         String[] selectionArgs = {username.trim(), password.trim()};
 
@@ -301,10 +301,10 @@ public class SQLiteDB extends SQLiteOpenHelper {
         while (!rs.isAfterLast()) {
             ItemsId.add(rs.getInt(rs.getColumnIndex(PROFILE_ID)));
             Items.add(
-                    "\nID: " + rs.getString(rs.getColumnIndex(PROFILE_ID)) + "\n" +
-                            "Name: " + rs.getString(rs.getColumnIndex(FNAME)) + " " + rs.getString(rs.getColumnIndex(MNAME)) + " " +  rs.getString(rs.getColumnIndex(LNAME)) + "\n\n" +
-                            "Role: " + rs.getString(rs.getColumnIndex(ROLE)) + "\n" +
-                            "Approved: " + (rs.getString(rs.getColumnIndex(APPROVED)).equals("0") ? "No" : "Yes")  + "\n");
+                    "\n" + rs.getString(rs.getColumnIndex(FNAME)) + " " + rs.getString(rs.getColumnIndex(MNAME)) + " " + rs.getString(rs.getColumnIndex(LNAME)) + "\n" +
+                            "ID: " + rs.getString(rs.getColumnIndex(PROFILE_ID)) + " | " +
+                            rs.getString(rs.getColumnIndex(ROLE)) + " | " +
+                            "Approved: " + (rs.getString(rs.getColumnIndex(APPROVED)).equals("0") ? "No" : "Yes") + "\n");
             rs.moveToNext();
         }
 

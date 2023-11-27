@@ -18,16 +18,18 @@
         tools:ignore="MissingConstraints">
 
         <TextView
-            android:textSize="45sp"
-            android:text="Signin"
+            android:textSize="25sp"
+            android:text="AdminMaker"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <TextView
-            android:textSize="25sp"
+            android:textSize="35sp"
+            android:textStyle="bold"
             android:layout_marginBottom="50dp"
-            android:text="Please signin to continue."
+            android:text="Hello! Kindly login and check awesome!"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
 
 
         <TextView
@@ -38,6 +40,7 @@
         <EditText
             android:paddingStart="5dp"
             android:textSize="25sp"
+            android:hint="Input username"
             android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -53,6 +56,7 @@
             android:textSize="25sp"
             android:paddingStart="5dp"
             android:id="@+id/password"
+            android:hint="Input password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
@@ -60,19 +64,17 @@
         <Button
             android:layout_marginTop="50dp"
             android:id="@+id/btnLogin"
-            android:text="Continue"
+            android:text="Login"
             android:textSize="25sp"
             android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
         <Button
-            android:textColor="@color/material_dynamic_neutral30"
-            android:backgroundTint="@color/material_dynamic_neutral100"
             android:layout_marginTop="10dp"
             android:id="@+id/btnSignup"
-            android:text="Don't have an account? Signup"
+            android:text="Signup"
             android:padding="10dp"
-            android:textSize="20sp"
+            android:textSize="25sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </LinearLayout>

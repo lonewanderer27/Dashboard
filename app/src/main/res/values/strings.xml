@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">Dashup</string>
+    <string name="app_name">AdminMaker</string>
     <string-array name="genders">
         <item>Male</item>
         <item>Female</item>
-        <item>Intersex</item>
-        <item>Agender</item>
-        <item>Non-Binary</item>
-        <item>I\'d rather not say</item>
+<!--        <item>Intersex</item>-->
+<!--        <item>Agender</item>-->
+<!--        <item>Non-Binary</item>-->
+<!--        <item>I\'d rather not say</item>-->
     </string-array>
     <string-array name="approved">
         <item>No</item>
