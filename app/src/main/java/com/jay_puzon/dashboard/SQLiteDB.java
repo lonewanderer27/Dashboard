@@ -291,29 +291,33 @@ public class SQLiteDB extends SQLiteOpenHelper {
     @SuppressLint("Range")
     public ArrayList<String> GetRecords() {
         SQLiteDatabase conn = this.getReadableDatabase();
-        ArrayList<String> items = new ArrayList<>();
 
-        try (Cursor rs = conn.rawQuery("SELECT * FROM " + PROFILE, null)) {
-            while (rs.moveToNext()) {
-                int profileId = rs.getInt(rs.getColumnIndex(PROFILE_ID));
-                String fullName = String.format("ID: %s\n" +
-                                "First Name: %s\n" +
-                                "Middle Name: %s\n" +
-                                "Last Name: %s\n\n" +
-                                "Role: %s\n" +
-                                "Approved: %s\n\n%s",
-                        profileId,
-                        rs.getString(rs.getColumnIndex(FNAME)),
-                        rs.getString(rs.getColumnIndex(MNAME)),
-                        rs.getString(rs.getColumnIndex(LNAME)),
-                        rs.getString(rs.getColumnIndex(ROLE)),
-                        rs.getString(rs.getColumnIndex(APPROVED)).equals("0") ? "FALSE" : "TRUE",
-                        "------------------------");
+        Items = new ArrayList<>();
+        ItemsId = new ArrayList<>();
 
-                items.add(fullName);
-            }
+        rs = conn.rawQuery("SELECT * FROM " + PROFILE, null);
+        rs.moveToFirst();
+
+        while (!rs.isAfterLast()) {
+            ItemsId.add(rs.getInt(rs.getColumnIndex(PROFILE_ID)));
+            String fName = rs.getString(rs.getColumnIndex(FNAME));
+            String mName = rs.getString(rs.getColumnIndex(MNAME));
+            String lName = rs.getString(rs.getColumnIndex(LNAME));
+
+            fName = (fName == null || fName.isEmpty()) ? "N/A" : fName;
+            mName = (mName == null || mName.isEmpty()) ? "N/A" : mName;
+            lName = (lName == null || lName.isEmpty()) ? "N/A" : lName;
+
+            Items.add(
+                    "\nRole: " + rs.getString(rs.getColumnIndex(ROLE)) + " - ID: " + rs.getString(rs.getColumnIndex(PROFILE_ID)) + "\n\n" +
+                            "First Name: " + fName + "\n" +
+                            "Middle Name: " + mName + "\n" +
+                            "Last Name: " + lName + "\n\n" +
+                            "Approved: " + (rs.getString(rs.getColumnIndex(APPROVED)).equals("0") ? "FALSE" : "TRUE")  + "\n");
+            rs.moveToNext();
         }
 
-        return items;
+        rs.close();
+        return Items;
     }
 }
