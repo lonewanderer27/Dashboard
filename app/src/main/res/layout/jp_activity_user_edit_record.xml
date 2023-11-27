@@ -265,7 +265,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:backgroundTint="@color/black"
+            android:backgroundTint="#6f0000"
             android:padding="10dp"
             android:text="Delete Record"
             android:textSize="25sp" />
