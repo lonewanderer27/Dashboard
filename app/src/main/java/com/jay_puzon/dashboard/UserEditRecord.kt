@@ -27,12 +27,13 @@ class UserEditRecord : AppCompatActivity() {
     private var Password: EditText? = null
     private var Contact: EditText? = null
     private var BtnUpdate: Button? = null
+    private var BtnDelete: Button? = null
     private var GenderSelection: Int = 0
     private var ApprovedSelection: Int = 0
 
     private val Conn: SQLiteDB = SQLiteDB(this);
 
-    inner class GenderActivity: Activity(), AdapterView.OnItemSelectedListener {
+    inner class GenderActivity : Activity(), AdapterView.OnItemSelectedListener {
         override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
             GenderSelection = position
         }
@@ -42,7 +43,7 @@ class UserEditRecord : AppCompatActivity() {
         }
     }
 
-    inner class ApprovedActivity: Activity(), AdapterView.OnItemSelectedListener {
+    inner class ApprovedActivity : Activity(), AdapterView.OnItemSelectedListener {
         override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
             ApprovedSelection = position
         }
@@ -68,6 +69,7 @@ class UserEditRecord : AppCompatActivity() {
         Approved = findViewById(R.id.approved)
         Contact = findViewById(R.id.contact)
         BtnUpdate = findViewById(R.id.btnUpdate)
+        BtnDelete = findViewById(R.id.btnDelete)
 
         Gender!!.onItemSelectedListener = GenderActivity();
         ArrayAdapter.createFromResource(
@@ -162,6 +164,26 @@ class UserEditRecord : AppCompatActivity() {
         val genderIndex = gendersArray.indexOf(gender)
         Gender!!.setSelection(genderIndex)
 
+        BtnDelete!!.setOnClickListener {
+            // if the user is admin, then delete the user and go back to the list
+            // if the user is not admin, then delete the user and go back to the login page
+            if (CurrentUser!!.role.equals(SQLiteDB.ADMIN)) {
+                if (Conn.DeleteRecord(id)) {
+                    Toast.makeText(this, "Record deleted", Toast.LENGTH_SHORT).show()
+                    finish()
+                } else {
+                    Toast.makeText(this, "Error deleting record", Toast.LENGTH_SHORT).show()
+                }
+            } else {
+                if (Conn.DeleteRecord(id)) {
+                    Toast.makeText(this, "Record deleted", Toast.LENGTH_SHORT).show()
+                    finish()
+                } else {
+                    Toast.makeText(this, "Error deleting record", Toast.LENGTH_SHORT).show()
+                }
+            }
+        }
+
         BtnUpdate!!.setOnClickListener {
             if (CurrentUser!!.role.equals(SQLiteDB.ADMIN)) {
                 // modify the approve user based on the currently selected approved option
@@ -169,7 +191,8 @@ class UserEditRecord : AppCompatActivity() {
                     val approved = Approved!!.selectedItem.toString() == "Yes"
 
                     if (Conn.ToggleApproveUser(id, approved)) {
-                        val message = if (approved) "$username has been approved" else "$username has been revoked access"
+                        val message =
+                            if (approved) "$username has been approved" else "$username has been revoked access"
                         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
                     }
                 }

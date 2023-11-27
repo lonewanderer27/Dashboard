@@ -15,8 +15,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Update Record"
             android:layout_marginBottom="10dp"
+            android:text="Update Record"
             android:textAlignment="center"
             android:textSize="30sp" />
 
@@ -206,8 +206,6 @@
         </LinearLayout>
 
 
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -252,12 +250,22 @@
         </LinearLayout>
 
         <Button
-            android:layout_marginTop="20dp"
             android:id="@+id/btnUpdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Update Record"
+            android:layout_marginTop="20dp"
             android:padding="10dp"
+            android:text="Update Record"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/black"
+            android:padding="10dp"
+            android:text="Delete Record"
             android:textSize="25sp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
