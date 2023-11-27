@@ -212,7 +212,7 @@ class UserEditRecord : AppCompatActivity() {
 
             // check if each fields have values
             fields.forEachIndexed { i, name ->
-                if (name!!.text.equals("")) {
+                if (name!!.text.toString().equals("")) {
                     fields[i]!!.error = "Please fill up this field!"
                     fields[i]!!.requestFocus();
                     return@setOnClickListener
