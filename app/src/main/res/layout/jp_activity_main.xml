@@ -43,8 +43,7 @@
                 android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:enabled="false" />
+                android:layout_weight="0.5" />
         </LinearLayout>
 
         <LinearLayout
