@@ -300,12 +300,19 @@ public class SQLiteDB extends SQLiteOpenHelper {
 
         while (!rs.isAfterLast()) {
             ItemsId.add(rs.getInt(rs.getColumnIndex(PROFILE_ID)));
+            String fName = rs.getString(rs.getColumnIndex(FNAME));
+            String mName = rs.getString(rs.getColumnIndex(MNAME));
+            String lName = rs.getString(rs.getColumnIndex(LNAME));
+
+            fName = (fName == null || fName.isEmpty()) ? "N/A" : fName;
+            mName = (mName == null || mName.isEmpty()) ? "N/A" : mName;
+            lName = (lName == null || lName.isEmpty()) ? "N/A" : lName;
+
             Items.add(
-                    "\nID: " + rs.getString(rs.getColumnIndex(PROFILE_ID)) + "\n" +
-                            "First Name: " + rs.getString(rs.getColumnIndex(FNAME)) + "\n" +
-                            "Middle Name: " + rs.getString(rs.getColumnIndex(MNAME)) + "\n" +
-                            "Last Name: " + rs.getString(rs.getColumnIndex(LNAME)) + "\n\n" +
-                            "Role: " + rs.getString(rs.getColumnIndex(ROLE)) + "\n" +
+                    "\nRole: " + rs.getString(rs.getColumnIndex(ROLE)) + " - ID: " + rs.getString(rs.getColumnIndex(PROFILE_ID)) + "\n\n" +
+                            "First Name: " + fName + "\n" +
+                            "Middle Name: " + mName + "\n" +
+                            "Last Name: " + lName + "\n\n" +
                             "Approved: " + (rs.getString(rs.getColumnIndex(APPROVED)).equals("0") ? "FALSE" : "TRUE")  + "\n");
             rs.moveToNext();
         }
