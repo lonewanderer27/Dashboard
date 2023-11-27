@@ -123,7 +123,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text=" Last Name: "
+                android:text=" Lst Name: "
                 android:textSize="20sp" />
 
             <EditText
@@ -169,7 +169,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text=" Contact: "
+                android:text=" Contact #: "
                 android:textSize="20sp" />
 
             <EditText
