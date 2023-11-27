@@ -85,7 +85,7 @@ class Signup : AppCompatActivity() {
 
             // check if each field is filled up
             fields.forEachIndexed { i, name ->
-                if (name!!.text.equals("")) {
+                if (name!!.text.toString().equals("")) {
                     fields[i]!!.error = "Please fill up this field!"
                     fields[i]!!.requestFocus();
                     return@setOnClickListener
