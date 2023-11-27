@@ -3,6 +3,8 @@
     <string-array name="genders">
         <item>Male</item>
         <item>Female</item>
+        <item>Intersex</item>
+        <item>Agender</item>
         <item>Non-Binary</item>
         <item>I\'d rather not say</item>
     </string-array>
