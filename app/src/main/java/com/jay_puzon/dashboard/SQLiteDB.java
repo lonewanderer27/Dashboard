@@ -306,7 +306,7 @@ public class SQLiteDB extends SQLiteOpenHelper {
                             "Middle Name: " + rs.getString(rs.getColumnIndex(MNAME)) + "\n" +
                             "Last Name: " + rs.getString(rs.getColumnIndex(LNAME)) + "\n\n" +
                             "Role: " + rs.getString(rs.getColumnIndex(ROLE)) + "\n" +
-                            "Approved: " + (rs.getString(rs.getColumnIndex(APPROVED)).equals("0") ? "FALSE" : "TRUE")  + "\n");
+                            "Approved: " + (rs.getString(rs.getColumnIndex(APPROVED)).equals("0") ? "Pending" : "Yes")  + "\n");
             rs.moveToNext();
         }
 

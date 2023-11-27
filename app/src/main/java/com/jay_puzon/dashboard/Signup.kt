@@ -23,6 +23,7 @@ class Signup : AppCompatActivity() {
     private var Gender: Spinner? = null
     private var Contact: EditText? = null
     private var BtnSignup: Button? = null
+    private var BtnLogin: Button? = null
     private var GenderSelection: Int = 0
     private var Conn = SQLiteDB(this)
 
@@ -51,6 +52,11 @@ class Signup : AppCompatActivity() {
         Gender = findViewById(R.id.gender)
         Contact = findViewById(R.id.contact)
         BtnSignup = findViewById(R.id.btnSignup)
+        BtnLogin = findViewById(R.id.btnLogin)
+
+        BtnLogin!!.setOnClickListener {
+            finish()
+        }
 
         Gender!!.onItemSelectedListener = GenderActivity();
         ArrayAdapter.createFromResource(

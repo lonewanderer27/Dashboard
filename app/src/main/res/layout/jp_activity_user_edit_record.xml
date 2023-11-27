@@ -78,7 +78,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text=" First Name: "
+                android:text=" Fst Name: "
                 android:textSize="20sp" />
 
             <EditText
@@ -100,7 +100,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text=" Middle Nm: "
+                android:text=" Mdl Nm: "
                 android:textSize="20sp" />
 
             <EditText
@@ -123,7 +123,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text=" Last Name: "
+                android:text=" Lst Name: "
                 android:textSize="20sp" />
 
             <EditText
@@ -136,6 +136,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/llPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -201,7 +202,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:hint="Address"
-                android:lines="3" />
+                android:lines="2" />
 
         </LinearLayout>
 

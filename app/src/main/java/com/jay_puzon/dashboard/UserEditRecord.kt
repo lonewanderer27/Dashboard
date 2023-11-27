@@ -2,6 +2,7 @@ package com.jay_puzon.dashboard
 
 import android.app.Activity
 import android.os.Bundle
+import android.text.InputType
 import android.util.Log
 import android.view.View
 import android.widget.AdapterView
@@ -129,6 +130,9 @@ class UserEditRecord : AppCompatActivity() {
                 // admin is viewing their own profile, they can edit
                 // but disable the llApproved layout
                 findViewById<LinearLayout>(R.id.llApproved).visibility = View.GONE;
+
+                // disable the delete button
+                BtnDelete!!.visibility = View.GONE;
             }
 
             if (!CurrentUser!!.username.equals(username)) {
@@ -141,6 +145,9 @@ class UserEditRecord : AppCompatActivity() {
                 Address!!.isEnabled = false
                 Gender!!.isEnabled = false
                 Contact!!.isEnabled = false
+
+                // hide the password field
+                findViewById<LinearLayout>(R.id.llPassword).visibility = View.GONE;
             }
         }
 
