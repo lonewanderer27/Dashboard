@@ -18,7 +18,7 @@ public class SQLiteDB extends SQLiteOpenHelper {
     public static final String DB_NAME = "records.db";
     public static final String CURRENT_PROFILE = "current_profile";
     public static final String PROFILE = "profile", PROFILE_ID = "PROFILE_ID", FNAME = "fname", MNAME = "mname", LNAME = "lname", ADDRESS = "address", ROLE = "role", USER = "user", ADMIN = "admin", APPROVED = "approved", USERNAME = "username", PASSWORD = "password", GENDER = "gender", CONTACT = "contact";
-    public static final String AD_FNAME = "Adriane James", AD_MNAME = "Jabagat", AD_LNAME = "Puzon", AD_ADDRESS = "3853 Macabulos St. Bangkal, Makati City", AD_CONTACT = "09983082814", AD_GENDER = "Male";
+    public static final String AD_FNAME = "John Andrei", AD_MNAME = "", AD_LNAME = "Cabili", AD_ADDRESS = "123 Main Street, Brgy Bahklu, Pasay City, Metro Manila, Philippines", AD_CONTACT = "09584083814", AD_GENDER = "Male";
     ContentValues VALS;
     Cursor rs;
     ArrayList<String> Items;
@@ -302,11 +302,9 @@ public class SQLiteDB extends SQLiteOpenHelper {
             ItemsId.add(rs.getInt(rs.getColumnIndex(PROFILE_ID)));
             Items.add(
                     "\nID: " + rs.getString(rs.getColumnIndex(PROFILE_ID)) + "\n" +
-                            "First Name: " + rs.getString(rs.getColumnIndex(FNAME)) + "\n" +
-                            "Middle Name: " + rs.getString(rs.getColumnIndex(MNAME)) + "\n" +
-                            "Last Name: " + rs.getString(rs.getColumnIndex(LNAME)) + "\n\n" +
+                            "Name: " + rs.getString(rs.getColumnIndex(FNAME)) + " " + rs.getString(rs.getColumnIndex(MNAME)) + " " +  rs.getString(rs.getColumnIndex(LNAME)) + "\n\n" +
                             "Role: " + rs.getString(rs.getColumnIndex(ROLE)) + "\n" +
-                            "Approved: " + (rs.getString(rs.getColumnIndex(APPROVED)).equals("0") ? "FALSE" : "TRUE")  + "\n");
+                            "Approved: " + (rs.getString(rs.getColumnIndex(APPROVED)).equals("0") ? "No" : "Yes")  + "\n");
             rs.moveToNext();
         }
 

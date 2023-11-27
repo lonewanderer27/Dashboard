@@ -15,9 +15,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="25dp"
             android:text="Update Record"
-            android:textAlignment="center"
             android:textSize="30sp" />
 
         <LinearLayout
@@ -201,7 +200,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:hint="Address"
-                android:lines="3" />
+                android:lines="2" />
 
         </LinearLayout>
 
@@ -249,23 +248,32 @@
                 android:layout_weight="0.5"></Spinner>
         </LinearLayout>
 
-        <Button
-            android:id="@+id/btnUpdate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <LinearLayout
             android:layout_marginTop="20dp"
-            android:padding="10dp"
-            android:text="Update Record"
-            android:textSize="25sp" />
-
-        <Button
-            android:id="@+id/btnDelete"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="@color/black"
-            android:padding="10dp"
-            android:text="Delete Record"
-            android:textSize="25sp" />
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/btnUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:padding="10dp"
+                android:layout_weight="0.5"
+                android:text="Update"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/btnDelete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/black"
+                android:padding="10dp"
+                android:layout_margin="5dp"
+                android:layout_weight="0.5"
+                android:text="Delete"
+                android:textSize="25sp" />
+        </LinearLayout>
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

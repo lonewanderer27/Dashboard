@@ -1,6 +1,7 @@
 package com.jay_puzon.dashboard
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -23,6 +24,7 @@ class Signup : AppCompatActivity() {
     private var Gender: Spinner? = null
     private var Contact: EditText? = null
     private var BtnSignup: Button? = null
+    private var BtnLogin: Button? = null
     private var GenderSelection: Int = 0
     private var Conn = SQLiteDB(this)
 
@@ -51,6 +53,7 @@ class Signup : AppCompatActivity() {
         Gender = findViewById(R.id.gender)
         Contact = findViewById(R.id.contact)
         BtnSignup = findViewById(R.id.btnSignup)
+        BtnLogin = findViewById(R.id.btnLogin)
 
         Gender!!.onItemSelectedListener = GenderActivity();
         ArrayAdapter.createFromResource(
@@ -60,6 +63,11 @@ class Signup : AppCompatActivity() {
         ).also { adapter ->
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             Gender!!.adapter = adapter
+        }
+
+        BtnLogin!!.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
 
         BtnSignup!!.setOnClickListener {

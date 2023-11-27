@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Dashboard</string>
+    <string name="app_name">Dashup</string>
     <string-array name="genders">
         <item>Male</item>
         <item>Female</item>
