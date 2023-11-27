@@ -18,7 +18,7 @@ public class SQLiteDB extends SQLiteOpenHelper {
     public static final String DB_NAME = "records.db";
     public static final String CURRENT_PROFILE = "current_profile";
     public static final String PROFILE = "profile", PROFILE_ID = "PROFILE_ID", FNAME = "fname", MNAME = "mname", LNAME = "lname", ADDRESS = "address", ROLE = "role", USER = "user", ADMIN = "admin", APPROVED = "approved", USERNAME = "username", PASSWORD = "password", GENDER = "gender", CONTACT = "contact";
-    public static final String AD_FNAME = "Adriane James", AD_MNAME = "Jabagat", AD_LNAME = "Puzon", AD_ADDRESS = "3853 Macabulos St. Bangkal, Makati City", AD_CONTACT = "09983082814", AD_GENDER = "Male";
+    public static final String AD_FNAME = "Christian Miles", AD_MNAME = "", AD_LNAME = "Balanlay", AD_ADDRESS = "123 Mabini Street, Barangay San Juan, Makati City, Metro Manila, 1234 Philippines", AD_CONTACT = "09171234567", AD_GENDER = "Male";
     ContentValues VALS;
     Cursor rs;
     ArrayList<String> Items;
