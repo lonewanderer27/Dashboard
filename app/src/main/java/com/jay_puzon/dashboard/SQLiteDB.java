@@ -291,26 +291,29 @@ public class SQLiteDB extends SQLiteOpenHelper {
     @SuppressLint("Range")
     public ArrayList<String> GetRecords() {
         SQLiteDatabase conn = this.getReadableDatabase();
+        ArrayList<String> items = new ArrayList<>();
 
-        Items = new ArrayList<>();
-        ItemsId = new ArrayList<>();
+        try (Cursor rs = conn.rawQuery("SELECT * FROM " + PROFILE, null)) {
+            while (rs.moveToNext()) {
+                int profileId = rs.getInt(rs.getColumnIndex(PROFILE_ID));
+                String fullName = String.format("ID: %s\n" +
+                                "First Name: %s\n" +
+                                "Middle Name: %s\n" +
+                                "Last Name: %s\n\n" +
+                                "Role: %s\n" +
+                                "Approved: %s\n\n%s",
+                        profileId,
+                        rs.getString(rs.getColumnIndex(FNAME)),
+                        rs.getString(rs.getColumnIndex(MNAME)),
+                        rs.getString(rs.getColumnIndex(LNAME)),
+                        rs.getString(rs.getColumnIndex(ROLE)),
+                        rs.getString(rs.getColumnIndex(APPROVED)).equals("0") ? "FALSE" : "TRUE",
+                        "------------------------");
 
-        rs = conn.rawQuery("SELECT * FROM " + PROFILE, null);
-        rs.moveToFirst();
-
-        while (!rs.isAfterLast()) {
-            ItemsId.add(rs.getInt(rs.getColumnIndex(PROFILE_ID)));
-            Items.add(
-                    "\nID: " + rs.getString(rs.getColumnIndex(PROFILE_ID)) + "\n" +
-                            "First Name: " + rs.getString(rs.getColumnIndex(FNAME)) + "\n" +
-                            "Middle Name: " + rs.getString(rs.getColumnIndex(MNAME)) + "\n" +
-                            "Last Name: " + rs.getString(rs.getColumnIndex(LNAME)) + "\n\n" +
-                            "Role: " + rs.getString(rs.getColumnIndex(ROLE)) + "\n" +
-                            "Approved: " + (rs.getString(rs.getColumnIndex(APPROVED)).equals("0") ? "FALSE" : "TRUE")  + "\n");
-            rs.moveToNext();
+                items.add(fullName);
+            }
         }
 
-        rs.close();
-        return Items;
+        return items;
     }
 }

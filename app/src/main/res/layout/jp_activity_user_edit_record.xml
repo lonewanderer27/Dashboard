@@ -15,197 +15,78 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Update Record"
             android:layout_marginBottom="10dp"
+            android:text="Update Record"
             android:textAlignment="center"
             android:textSize="30sp" />
 
-        <LinearLayout
+        <EditText
+            android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingVertical="5dp">
+            android:hint="Username"
+            android:textSize="25sp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:text=" Username: "
-                android:textSize="20sp" />
 
-            <EditText
-                android:id="@+id/username"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="0.5"
-                android:enabled="false"
-                android:hint="Username" />
-        </LinearLayout>
-
-        <LinearLayout
+        <EditText
+            android:id="@+id/role"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingVertical="5dp">
+            android:layout_weight="0.5"
+            android:enabled="false"
+            android:hint="Role"
+            android:textSize="25sp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:text=" Role: "
-                android:textSize="20sp" />
 
-            <EditText
-                android:id="@+id/role"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:enabled="false"
-                android:hint="Role" />
-
-        </LinearLayout>
-
-        <LinearLayout
+        <EditText
+            android:id="@+id/fname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingVertical="5dp">
+            android:layout_weight="0.5"
+            android:hint="First Name"
+            android:textSize="25sp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:text=" First Name: "
-                android:textSize="20sp" />
 
-            <EditText
-                android:id="@+id/fname"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:hint="First Name" />
-        </LinearLayout>
-
-        <LinearLayout
+        <EditText
+            android:id="@+id/mname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingVertical="5dp">
+            android:layout_weight="0.5"
+            android:hint="Middle Name"
+            android:textSize="25sp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:text=" Middle Nm: "
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/mname"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:hint="Middle Name" />
-
-        </LinearLayout>
-
-        <LinearLayout
+        <EditText
+            android:id="@+id/lname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingVertical="5dp">
+            android:layout_weight="0.5"
+            android:hint="Last Name"
+            android:textSize="25sp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:text=" Last Name: "
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/lname"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:hint="Last Name" />
-
-        </LinearLayout>
-
-        <LinearLayout
+        <EditText
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingVertical="5dp">
+            android:layout_weight="0.5"
+            android:hint="Password"
+            android:textSize="25sp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:text=" Password: "
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:hint="Password" />
-
-        </LinearLayout>
-
-        <LinearLayout
+        <EditText
+            android:id="@+id/contact"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingVertical="5dp">
+            android:layout_weight="0.5"
+            android:hint="Contact"
+            android:textSize="25sp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:text=" Contact: "
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/contact"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:hint="Contact" />
-
-        </LinearLayout>
-
-        <LinearLayout
+        <EditText
+            android:id="@+id/address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:paddingVertical="5dp">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:text=" Address: "
-                android:textSize="20sp" />
-
-            <EditText
-                android:id="@+id/address"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.5"
-                android:hint="Address"
-                android:lines="3" />
-
-        </LinearLayout>
-
-
+            android:layout_weight="0.5"
+            android:hint="Address"
+            android:lines="2"
+            android:textSize="25sp" />
 
 
         <LinearLayout
@@ -220,7 +101,7 @@
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:text=" Gender: "
-                android:textSize="20sp" />
+                android:textSize="25sp" />
 
             <Spinner
                 android:id="@+id/gender"
@@ -241,8 +122,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text=" Approved: "
-                android:textSize="20sp" />
+                android:text=" Allow: "
+                android:textSize="25sp" />
 
             <Spinner
                 android:id="@+id/approved"
@@ -252,12 +133,12 @@
         </LinearLayout>
 
         <Button
-            android:layout_marginTop="20dp"
             android:id="@+id/btnUpdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Update Record"
+            android:layout_marginTop="20dp"
             android:padding="10dp"
+            android:text="Update Record"
             android:textSize="25sp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
