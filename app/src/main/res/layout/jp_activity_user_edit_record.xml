@@ -13,6 +13,7 @@
         tools:ignore="MissingConstraints">
 
         <TextView
+            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -40,7 +41,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
                 android:enabled="false"
-                android:hint="Username" />
+                android:hint="Enter Username" />
         </LinearLayout>
 
         <LinearLayout
@@ -63,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:enabled="false"
-                android:hint="Role" />
+                android:hint="Enter Role" />
 
         </LinearLayout>
 
@@ -86,7 +87,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:hint="First Name" />
+                android:hint="Enter First Name" />
         </LinearLayout>
 
         <LinearLayout
@@ -100,7 +101,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text=" Mdl Nm: "
+                android:text=" Mdl Name: "
                 android:textSize="20sp" />
 
             <EditText
@@ -108,7 +109,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:hint="Middle Name" />
+                android:hint="Enter Middle Name" />
 
         </LinearLayout>
 
@@ -131,7 +132,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:hint="Last Name" />
+                android:hint="Enter Last Name" />
 
         </LinearLayout>
 
@@ -155,7 +156,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:hint="Password" />
+                android:hint="Enter Password" />
 
         </LinearLayout>
 
@@ -170,7 +171,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text=" Contact: "
+                android:text=" Contact #: "
                 android:textSize="20sp" />
 
             <EditText
@@ -178,7 +179,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:hint="Contact" />
+                android:hint="Enter Contact #" />
 
         </LinearLayout>
 
@@ -201,7 +202,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
-                android:hint="Address"
+                android:hint="Enter Address"
                 android:lines="2" />
 
         </LinearLayout>
@@ -218,14 +219,14 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text=" Gender: "
+                android:text=" Select Gender: "
                 android:textSize="20sp" />
 
             <Spinner
                 android:id="@+id/gender"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="0.5"></Spinner>
+                android:layout_weight="0.8"></Spinner>
         </LinearLayout>
 
         <LinearLayout
@@ -247,7 +248,7 @@
                 android:id="@+id/approved"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="0.5"></Spinner>
+                android:layout_weight="0.8"></Spinner>
         </LinearLayout>
 
         <Button
