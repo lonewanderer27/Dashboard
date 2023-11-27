@@ -129,6 +129,9 @@ class UserEditRecord : AppCompatActivity() {
                 // admin is viewing their own profile, they can edit
                 // but disable the llApproved layout
                 findViewById<LinearLayout>(R.id.llApproved).visibility = View.GONE;
+
+                // hide the delete button
+                BtnDelete!!.visibility = View.GONE;
             }
 
             if (!CurrentUser!!.username.equals(username)) {
