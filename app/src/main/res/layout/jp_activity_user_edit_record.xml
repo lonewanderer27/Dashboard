@@ -15,8 +15,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Update Record"
             android:layout_marginBottom="10dp"
+            android:text="Update User"
             android:textAlignment="center"
             android:textSize="30sp" />
 
@@ -100,7 +100,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text=" Middle Nm: "
+                android:text=" Mdl Name: "
                 android:textSize="20sp" />
 
             <EditText
@@ -205,9 +205,6 @@
 
         </LinearLayout>
 
-
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -252,12 +249,12 @@
         </LinearLayout>
 
         <Button
-            android:layout_marginTop="20dp"
             android:id="@+id/btnUpdate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Update Record"
+            android:layout_marginTop="20dp"
             android:padding="10dp"
+            android:text="Update User"
             android:textSize="25sp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
