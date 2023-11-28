@@ -19,13 +19,13 @@
 
         <TextView
             android:textSize="45sp"
-            android:text="Signin"
+            android:text="Sign in"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <TextView
             android:textSize="25sp"
             android:layout_marginBottom="50dp"
-            android:text="Please signin to continue."
+            android:text="Please sign in to continue."
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -52,6 +52,7 @@
         <EditText
             android:textSize="25sp"
             android:paddingStart="5dp"
+            android:inputType="textPassword"
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
@@ -70,7 +71,7 @@
             android:backgroundTint="@color/material_dynamic_neutral100"
             android:layout_marginTop="10dp"
             android:id="@+id/btnSignup"
-            android:text="Don't have an account? Signup"
+            android:text="Don't have an account? Sign up"
             android:padding="10dp"
             android:textSize="20sp"
             android:layout_width="match_parent"

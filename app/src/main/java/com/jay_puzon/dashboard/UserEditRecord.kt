@@ -132,6 +132,9 @@ class UserEditRecord : AppCompatActivity() {
 
                 // hide the delete button
                 BtnDelete!!.visibility = View.GONE;
+
+                // hide the password field
+                findViewById<LinearLayout>(R.id.llPassword).visibility = View.GONE;
             }
 
             if (!CurrentUser!!.username.equals(username)) {
