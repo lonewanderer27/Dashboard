@@ -55,6 +55,8 @@ class Signup : AppCompatActivity() {
         BtnSignup = findViewById(R.id.btnSignup)
         BtnLogin = findViewById(R.id.btnLogin)
 
+        Username!!.requestFocus();
+
         Gender!!.onItemSelectedListener = GenderActivity();
         ArrayAdapter.createFromResource(
             this,

@@ -31,6 +31,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(CallSignup);
         }
 
+        Username!!.requestFocus();
         Login!!.setOnClickListener {
             try {
                 val username = Username!!.text.toString();
