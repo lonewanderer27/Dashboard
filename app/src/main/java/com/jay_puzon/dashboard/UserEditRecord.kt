@@ -236,9 +236,9 @@ class UserEditRecord : AppCompatActivity() {
             // create a new object that contains the updated information
             val updatedUser = User(
                 id,
-                username,
+                username!!,
                 Password!!.text.toString(),
-                role,
+                role!!,
                 Fname!!.text.toString(),
                 Mname!!.text.toString(),
                 Lname!!.text.toString(),
