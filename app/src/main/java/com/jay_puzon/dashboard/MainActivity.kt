@@ -46,6 +46,9 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 if (Conn.RecordExists(username, password)) {
+                    // clear the password field
+                    Password!!.text.clear();
+
                     if (user!!.role == SQLiteDB.ADMIN) {
                         val intent = Intent(this, Records::class.java);
                         intent.putExtra(SQLiteDB.CURRENT_PROFILE, user);
