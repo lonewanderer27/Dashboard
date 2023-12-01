@@ -53,7 +53,7 @@ public class Records extends ListActivity {
 //        Intent CallEdit = new Intent(".AdminEditRecord");
         // which depends on the role of the user
         Intent CallEdit;
-        CallEdit = new Intent(".UserEditRecord");
+        CallEdit = new Intent(this, UserEditRecord.class);
 
         // Pass the data to the next activity
         CallEdit.putExtra(SQLiteDB.PROFILE_ID, user.id);
